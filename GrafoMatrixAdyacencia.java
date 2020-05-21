@@ -115,13 +115,6 @@ public void eliminaArista(int v1, int v2) {
 	}
 }
 
-public void borrarGrafo() {
-	for (int i = 0; i < matrix.length; i++) {
-		for (int j = 0; j < matrix[i].length; j++) {
-			matrix[i][j] = 0;
-		}
-	}
-}
 
 public void impMatrix() {
 	System.out.print(" ");
@@ -138,48 +131,5 @@ public void impMatrix() {
 	}
 }
 
-// ----- Operaciones para obtener Lista de Adyacencia ----- //
-
-public boolean grafoVerticesAdyacentes(int v) {
-	int auxiliar = 0;
-	boolean estavacia = true;
-
-	while (auxiliar < MAXIMO_VERTICES && estavacia) {
-		if (matrix[v][auxiliar] == 1) {
-			estavacia = false;
-		} else {
-			auxiliar = auxiliar + 1;
-		}
-	}
-
-return estavacia;
-}
-
-public int primeroListaAdy(int v) throws RuntimeException {
-	int auxiliar = 0;
-	boolean estavacia = true;
-
-	while (auxiliar < MAXIMO_VERTICES && estavacia) {
-		if (matrix[v][auxiliar] == 1) {
-		estavacia = false;
-		} else {
-		auxiliar = auxiliar + 1;
-		}
-	}
-
-	if (auxiliar == MAXIMO_VERTICES)
-		throw new RuntimeException("La lista de Adyacencia esta vacía");
-	return auxiliar;
-}
-
-public int proxAdy(int v, int ady) {
-	int proximo = ady + 1;
-	while (proximo < MAXIMO_VERTICES && matrix[v][proximo] == 0) {
-		proximo = proximo + 1;
-		}
-	if (proximo == MAXIMO_VERTICES)
-		return -1;
-	return proximo;
-	}
 
 }

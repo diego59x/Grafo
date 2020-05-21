@@ -72,8 +72,8 @@ public String floyd(int[][] adyacencia)
  
                     return "las distancias minimas entre nodos son: \n"+cadena+"\nlos caminos minimos entre nodosson:\n"+enlacesres;
     }
-    
-  public String enlaces(int i,int k,String[][] aux_enlaces,String enl_rec)
+
+        public String enlaces(int i,int k,String[][] aux_enlaces,String enl_rec)
           {
             if(aux_enlaces[i][k].equals("")==true)
               {
