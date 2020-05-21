@@ -25,7 +25,7 @@ public ArrayList<String> ciudades(){
 			while (r.hasNextLine()) {
 				txt = r.nextLine(); //Mientras hayan lineas por leer se meten a la variable txt
 				fila += 1; 
-				nodos = txt.split(","); 
+				nodos = txt.split(" "); 
 
 				ciudades.add(nodos[0]); 
 				ciudades.add(nodos[1]);
