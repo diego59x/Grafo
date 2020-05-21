@@ -1,0 +1,5 @@
+guatemala,antigua,20,
+peten,izabal,30,
+antigua,peten,40,
+izabal,guatemala,15,
+peten,antigua,10
